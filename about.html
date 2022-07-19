@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,400;0,700;1,200;1,800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css\main.css">
+    <link rel="stylesheet" href="css\button.css">
+    <link rel="stylesheet" href="css\recods.css">
+    <link rel="stylesheet" href="css\modal.css">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="main.js"defer></script>
+    <title>CRUD</title>
+</head>
+<body>
+    <header>
+        <h1 class="header-title">Cadastro de Tutoriais</h1>
+    </header>
+    <main>
+        <button type="button" class="button blue mobile" id="cadastrarTutorial">Cadastrar tutorial</button>
+        <table id="tbTutorial" class="records">
+            <thead>
+                <tr>
+                    <th>Title</th>
+                    <th>Description</th>
+                    <th>published</th>
+                    <th>created At</th>
+                    <th>updatedAt</th>
+                    <th>Ações</th>
+                </tr>
+            </thead>
+            <tbody>
+<!--                   <td>id</td>
+                    <td>{{ tutorial.title }}</td>
+                    <td>{{ tutorial.description }}</td>
+                    <td>{{ tutorial.published }}</td>
+                    <td>{{ tutorial.createdAt }}</td>
+                    <td>{{ tutorial.updatedAt }}</td>
+                    <td>
+                        <button type="button" class="button green">editar</button>
+                        <button type="button" class="button red">excluir</button>
+                    </td>--> 
+            </tbody>
+        </table>
+        <div id="modal" class="modal">
+            <div class="modal-content">
+                <header class="modal-header">
+                    <h2 >Novo Tutorial</h2>
+                    <span class="modal-close" id="modalClose">&#10006;</span>
+                </header>
+                <form id="form" class="modal-form">
+                    <input id="title" dataindex = "new"type="Title" class="modal-field" placeholder="Title" required>
+                    <input id="description"  type="Description" class="modal-field" placeholder="Description" required>
+                    <input id="published" type="published" class="modal-field" placeholder="published" required>
+
+                </form>
+                <footer class="modal-footer">
+                    <button id="salvar" class="button green">Salvar</button>
+                    <button id = "cancelar "class="button blue">Cancelar</button>
+                </footer>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
